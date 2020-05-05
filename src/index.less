@@ -1,0 +1,28 @@
+@import '~iview/src/styles/index.less';
+
+@menu-dark-title: #001529;
+@menu-dark-active-bg: #000c17;
+@layout-sider-background: #001529;
+.index-spin-load {
+    animation: ani-spin 1s linear infinite;
+}
+
+@keyframes ani-spin {
+    from {
+        transform: rotate(0);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+.container {
+    background: #fff;
+    padding: 20px;
+    min-height: ~'calc(100vh - 160px)';
+}
+.header-actions {
+    margin: 10px 0;
+    button {
+        margin-right: 10px;
+    }
+}

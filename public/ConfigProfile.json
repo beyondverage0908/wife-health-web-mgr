@@ -1,0 +1,34 @@
+{
+    "environments": [
+        {
+            "name": "DEV",
+            "datacenter": "ALL",
+            "target": "DEV",
+            "container": "IIS7.5",
+            "version": "1.0"
+        },
+        {
+            "name": "TEST",
+            "datacenter": "ALL",
+            "target": "TEST",
+            "container": "IIS7.5",
+            "version": "1.0"
+        },
+        {
+            "name": "PROD",
+            "datacenter": "ALL",
+            "target": "PROD",
+            "container": "linux service",
+            "version": "1.0"
+        }
+    ],
+    "DEV": {
+        "captUrl": "https://cfgpassportuat2.eastmoney.com/captcha/scripts/em_capt.js"
+    },
+    "TEST": {
+        "captUrl": "https://cfgpassportuat2.eastmoney.com/captcha/scripts/em_capt.js"
+    },
+    "PROD": {
+        "captUrl": "https://cfgpassport2.eastmoney.com/captcha/scripts/em_capt.js"
+    }
+}
