@@ -5,13 +5,14 @@ import axios from '@/libs/api.request';
  * @param {{username:string,password:string}} {username,password}
  *
  */
-export const login = ({ username, password }) => {
+export const login = ({ username, password, type }) => {
     const data = {
-        username,
-        password
+        phone: username,
+        password,
+        type
     };
     return axios.request({
-        url: '/sys/login',
+        url: '/user/login',
         data,
         method: 'post'
     });
@@ -25,7 +26,7 @@ export const logout = () => {
 // 获取当前用户信息
 export const getUserStatus = () =>
     axios.request({
-        url: '/users/cur-user'
+        url: '/user/'
     });
 
 // 更新密码

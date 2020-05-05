@@ -12,7 +12,7 @@ const resolve = dir => {
 // 例如：https://www.foobar.com/my-app/
 // 需要将它改为'/my-app/'
 // iview-admin线上演示打包路径： https://file.iviewui.com/admin-dist/
-const BASE_URL = process.env.NODE_ENV === 'production' ? '/' : '/';
+const BASE_URL = process.env.NODE_ENV === 'production' ? '/wife' : '/wife';
 
 module.exports = {
     // Project deployment base
@@ -59,8 +59,8 @@ module.exports = {
         port: 8088,
         disableHostCheck: true,
         proxy: {
-            '/proj/api': {
-                target: 'http://172.31.225.54:8082',
+            '/v1': {
+                target: 'http://111.229.62.79:3000',
                 ws: false, // 关闭websocket
                 changeOrigin: true
                 // pathRewrite: {

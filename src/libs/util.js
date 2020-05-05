@@ -1,6 +1,7 @@
 /* eslint-disable func-names */
 /* eslint-disable no-use-before-define */
 import Cookies from 'js-cookie';
+import { Base64 } from 'js-base64';
 // cookie保存的天数
 import config from '@/config';
 import { forEach, hasOneOf, objEqual } from '@/libs/tools';
@@ -19,6 +20,15 @@ export const getToken = () => {
         return token;
     }
     return false;
+};
+
+// 获取basic认证
+export const getBasicAuth = () => {
+    const token = getToken();
+    if (token) {
+        return `Basic ${Base64.encode(`${token}:`)}`;
+    }
+    return '';
 };
 
 export const hasChild = item => {

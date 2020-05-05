@@ -23,6 +23,7 @@
         "element-ui": "^2.12.0",
         "html2canvas": "^1.0.0-alpha.12",
         "iview-area": "^1.5.17",
+        "js-base64": "^2.5.2",
         "js-cookie": "^2.2.0",
         "qs": "^6.9.0",
         "simplemde": "^1.11.2",
@@ -79,7 +80,7 @@
         "not ie <= 8"
     ],
     "gitHooks": {
-        "pre-commit": "lint-staged"
+        "pre-commit": "lint-staged-1"
     },
     "lint-staged": {
         "*.js": [

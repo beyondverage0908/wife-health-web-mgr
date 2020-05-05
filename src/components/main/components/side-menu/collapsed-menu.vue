@@ -35,9 +35,9 @@
     </Dropdown>
 </template>
 <script>
+import { findNodeUpperByClasses } from '@/libs/util';
 import mixin from './mixin';
 import itemMixin from './item-mixin';
-import { findNodeUpperByClasses } from '@/libs/util';
 
 export default {
     name: 'CollapsedMenu',

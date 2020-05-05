@@ -36,7 +36,7 @@ export default {
         async handleSubmit({ username, password }) {
             try {
                 this.isLogging = true;
-                const isLogged = await this.handleLogin({ username, password });
+                const isLogged = await this.handleLogin({ username, password, type: 100 });
                 if (isLogged) {
                     this.$router.push({
                         name: this.$config.homeName

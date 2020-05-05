@@ -77,9 +77,9 @@
     </div>
 </template>
 <script>
+import { getUnion } from '@/libs/tools';
 import SideMenuItem from './side-menu-item.vue';
 import CollapsedMenu from './collapsed-menu.vue';
-import { getUnion } from '@/libs/tools';
 import mixin from './mixin';
 
 export default {

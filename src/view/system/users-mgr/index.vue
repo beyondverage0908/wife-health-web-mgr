@@ -86,11 +86,11 @@
     </div>
 </template>
 <script>
+import { resetPassword, changeUserStatus, getUsers } from '@/api/user';
+import { filterEmptyData } from '@/libs/util';
 import EditModal from './components/edit-modal';
 import UserRolesModal from './components/user-roles-modal';
 import UserPrivsModal from './components/privs-modal';
-import { resetPassword, changeUserStatus, getUsers } from '@/api/user';
-import { filterEmptyData } from '@/libs/util';
 
 export default {
     components: {

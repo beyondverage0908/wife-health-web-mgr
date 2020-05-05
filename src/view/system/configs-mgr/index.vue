@@ -33,9 +33,9 @@
 </template>
 
 <script>
+import { getConfigs } from '@/api/configs';
 import HeaderSearch from './components/header-search';
 import EditModal from './components/edit-modal';
-import { getConfigs } from '@/api/configs';
 
 export default {
     name: 'options-mgr-table',

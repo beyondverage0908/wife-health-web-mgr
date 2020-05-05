@@ -13,7 +13,7 @@ const state = {
     hasLogged: false,
     hasGetPrivs: false,
     menuPrivs: [], // 拥有的菜单权限
-    operatePrivsMap: {} // 拥有的操作权限
+    operatePrivsMap: {}, // 拥有的操作权限
 };
 
 const mutations = {
@@ -47,12 +47,16 @@ const mutations = {
 };
 const actions = {
     // 登录
-    async handleLogin({ dispatch }, loginData) {
+    async handleLogin({ commit, dispatch }, loginData) {
         const { data } = await login(loginData);
         if (data.success) {
+            const { token, user } = data.data
+            commit('setToken', token)
+            commit('setUserInfo', user)
+            commit('setHasLogged', !!user);
             // 登陆成功后获取用户信息
-            const logged = await dispatch('getUserStatus');
-            return logged;
+            // const logged = await dispatch('getUserStatus');
+            return true;
         }
         return false;
     },

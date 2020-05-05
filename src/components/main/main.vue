@@ -63,6 +63,9 @@
 </template>
 <script>
 import { mapMutations, mapActions } from 'vuex';
+import { getNewTagList, routeEqual } from '@/libs/util';
+import routers from '@/router/routers';
+import minLogo from '@/assets/images/logo-min.png';
 import SideMenu from './components/side-menu';
 import HeaderBar from './components/header-bar';
 import TagsNav from './components/tags-nav';
@@ -72,9 +75,6 @@ import ABackTop from './components/a-back-top';
 // import Language from './components/language';
 // import ErrorStore from './components/error-store';
 import Env from './components/env';
-import { getNewTagList, routeEqual } from '@/libs/util';
-import routers from '@/router/routers';
-import minLogo from '@/assets/images/logo-min.png';
 import './main.less';
 
 export default {

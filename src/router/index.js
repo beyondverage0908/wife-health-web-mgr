@@ -1,12 +1,12 @@
 import Vue from 'vue';
 import Router from 'vue-router';
 import iView from 'view-design';
-import routes, { staticRoutes, dynamicRoutes } from './routers';
 import store from '@/store';
 // import { setToken, getToken, canTurnTo, setTitle } from '@/libs/util';
 import { setTitle } from '@/libs/util';
 import { mapPrivsDataToRouter } from '@/libs/tools';
 import config from '@/config';
+import routes, { staticRoutes, dynamicRoutes } from './routers';
 /**
  * 去除 NavigationDuplicated 错误
  */
@@ -36,7 +36,7 @@ function judgeAdmin(roles) {
 function createRouterWithPermission() {
     const router = new Router({
         routes,
-        mode: 'history'
+        mode: 'hash'
     });
     router.beforeEach(async (to, from, next) => {
         iView.LoadingBar.start();
@@ -101,7 +101,7 @@ function createRouterWithoutPermission() {
     store.commit('setRoutes', allRoutes);
     const router = new Router({
         routes: allRoutes,
-        mode: 'history'
+        mode: 'hash'
     });
 
     router.beforeEach((to, from, next) => {

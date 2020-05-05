@@ -17,8 +17,8 @@ export default {
      * @description api请求基础路径
      */
     baseUrl: {
-        dev: '/proj/api',
-        pro: ''
+        dev: '/v1/api',
+        pro: '/v1/api'
     },
     /**
      * @description 默认打开的首页的路由name值，默认为home

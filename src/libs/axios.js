@@ -1,6 +1,7 @@
 import axios from 'axios';
 import iView from 'view-design';
 import store from '@/store';
+import { getBasicAuth } from '@/libs/util';
 // import { Spin } from 'view-design'
 
 class HttpRequest {
@@ -14,7 +15,7 @@ class HttpRequest {
             baseURL: this.baseUrl,
             timeout: 30000,
             headers: {
-                //
+                Authorization: getBasicAuth()
             }
         };
         return config;

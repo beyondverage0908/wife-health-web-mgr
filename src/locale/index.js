@@ -1,8 +1,8 @@
 import Vue from 'vue';
 import VueI18n from 'vue-i18n';
-import zhCnLocale from 'iview/src/locale/lang/zh-CN';
-import enUsLocale from 'iview/src/locale/lang/en-US';
-import zhTwLocale from 'iview/src/locale/lang/zh-TW';
+import zhCnLocale from 'view-design/src/locale/lang/zh-CN';
+import enUsLocale from 'view-design/src/locale/lang/en-US';
+import zhTwLocale from 'view-design/src/locale/lang/zh-TW';
 import { localRead } from '@/libs/util';
 import customZhCn from './lang/zh-CN';
 import customZhTw from './lang/zh-TW';

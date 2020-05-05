@@ -1,13 +1,13 @@
 <template>
     <div class="todo-header-search">
-        <Form :label-width="50" label-position="left">
-            <Row :gutter="15">
-                <Col :span="7">
+        <Form :label-width="85" label-position="left">
+            <Row :gutter="16">
+                <Col :span="6">
                     <FormItem label="关键词" style="margin-bottom:0">
                         <Input v-model.trim="queryInfo.keyword" />
                     </FormItem>
                 </Col>
-                <Col :span="7">
+                <Col :span="6">
                     <Button type="primary" @click="handleSearch" style="margin-right:10px"
                         >查询</Button
                     >

@@ -2,24 +2,24 @@ import Main from '@/components/main';
 
 const todosRoutes = [
     {
-        path: '/todos',
-        name: 'todos',
+        path: '/指标管理',
+        name: 'quota',
         // redirect: '/todos/list',
         meta: {
-            title: 'todos',
+            title: '指标列表',
             icon: 'md-albums',
             showAlways: true
         },
         component: Main,
         children: [
             {
-                path: '/todos/list',
-                name: 'todos-list',
+                path: '/quota/list',
+                name: 'quota-list',
                 meta: {
-                    title: 'todos',
+                    title: '指标一览表',
                     icon: 'md-albums'
                 },
-                component: () => import('@/view/todos/index.vue')
+                component: () => import('@/view/quota/index.vue')
             }
         ]
     }
